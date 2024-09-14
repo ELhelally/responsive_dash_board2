@@ -11,7 +11,6 @@ class AdaptiveLayoutWidget extends StatelessWidget {
   final WidgetBuilder mobileLayout;
   final WidgetBuilder tabletLayout;
   final WidgetBuilder desktopLayout;
-
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
