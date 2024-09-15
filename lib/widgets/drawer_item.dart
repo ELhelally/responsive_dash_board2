@@ -4,8 +4,10 @@ import 'package:responsive_dash_board/models/darwer_item_model.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 
 class DrawerItem extends StatelessWidget {
-  const DrawerItem({super.key, required this.darwerItemModel});
+  const DrawerItem(
+      {super.key, required this.darwerItemModel, required this.isActive});
   final DrawerItemModel darwerItemModel;
+  final bool isActive;
   @override
   Widget build(BuildContext context) {
     return ListTile(
