@@ -58,4 +58,11 @@ abstract class AppStyles {
     fontWeight: FontWeight.w500,
     height: 0,
   );
+  static const TextStyle styleMedium12 = TextStyle(
+    color: Colors.white,
+    fontSize: 12,
+    fontFamily: 'Montserrat',
+    fontWeight: FontWeight.w500,
+    height: 0,
+  );
 }
