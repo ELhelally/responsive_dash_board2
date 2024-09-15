@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/models/darwer_item_model.dart';
 
 import 'package:responsive_dash_board/utils/app_images.dart';
 
 import 'package:responsive_dash_board/widgets/drawer_item_list_view_bulider.dart';
+import 'package:responsive_dash_board/widgets/in_active_drawer_item.dart';
 import 'package:responsive_dash_board/widgets/user_info_list_title.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -13,17 +15,37 @@ class CustomDrawer extends StatelessWidget {
       decoration: const BoxDecoration(
         color: Colors.white,
       ),
-      child: const Column(
-        children: [
-          UserInfoListTitle(
-              image:
-                  Assets.assetsImagesGangsterFace3dRenderingIconIllustrationPng,
-              title: 'Lekan Okeowo',
-              subTitle: 'demo@gmail.com'),
-          SizedBox(
-            height: 8,
+      child: const CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+              child: UserInfoListTitle(
+                  image: Assets
+                      .assetsImagesGangsterFace3dRenderingIconIllustrationPng,
+                  title: 'Lekan Okeowo',
+                  subTitle: 'demo@gmail.com')),
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 8,
+            ),
           ),
-          DrawerItemListViewBulider()
+          DrawerItemListViewBulider(),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Expanded(child: SizedBox()),
+                InActiveDrawerItem(
+                  darwerItemModel: DrawerItemModel(
+                      title: "Setting system",
+                      image: Assets.assetsImagesSetting2),
+                ),
+                InActiveDrawerItem(
+                    darwerItemModel: DrawerItemModel(
+                        title: "Logout account",
+                        image: Assets.assetsImagesLogout)),
+              ],
+            ),
+          )
         ],
       ),
     );
