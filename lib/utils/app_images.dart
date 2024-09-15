@@ -89,4 +89,14 @@ class Assets {
   /// Assets for assetsImagesWallet2
   /// lib/assets/images/wallet-2.svg
   static const String assetsImagesWallet2 = "lib/assets/images/wallet-2.svg";
+  ///////////
+  ////////
+  ///
+  static const String assetsImagesReadyPlayerMeAvatarMan =
+      "lib/assets/images/pngtree-3d-avatar-oldman-like-artist-png-image_7120501.png";
+  ///////////
+  ////////
+  ///
+  static const String assetsImagesReadyPlayerMeAvatarHuman =
+      "lib/assets/images/pngtree-3d-illustration-avatar-profile-man-png-image_9945226.png";
 }

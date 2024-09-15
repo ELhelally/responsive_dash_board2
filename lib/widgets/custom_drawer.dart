@@ -19,8 +19,7 @@ class CustomDrawer extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(
               child: UserInfoListTitle(
-                  image: Assets
-                      .assetsImagesGangsterFace3dRenderingIconIllustrationPng,
+                  image: Assets.assetsImagesReadyPlayerMeAvatarHuman,
                   title: 'Lekan Okeowo',
                   subTitle: 'demo@gmail.com')),
           SliverToBoxAdapter(
