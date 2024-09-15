@@ -39,10 +39,13 @@ class CustomDrawer extends StatelessWidget {
                       title: "Setting system",
                       image: Assets.assetsImagesSetting2),
                 ),
-                InActiveDrawerItem(
-                    darwerItemModel: DrawerItemModel(
-                        title: "Logout account",
-                        image: Assets.assetsImagesLogout)),
+                Padding(
+                  padding: EdgeInsets.only(bottom: 48),
+                  child: InActiveDrawerItem(
+                      darwerItemModel: DrawerItemModel(
+                          title: "Logout account",
+                          image: Assets.assetsImagesLogout)),
+                ),
               ],
             ),
           )
