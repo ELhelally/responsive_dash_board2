@@ -4,8 +4,10 @@ import 'package:responsive_dash_board/utils/app_styles.dart';
 class RangeOptions extends StatelessWidget {
   const RangeOptions({
     super.key,
+    required this.image,
   });
 
+  final String image;
   @override
   Widget build(BuildContext context) {
     return Container(

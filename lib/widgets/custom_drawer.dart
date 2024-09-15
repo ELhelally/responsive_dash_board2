@@ -24,7 +24,7 @@ class CustomDrawer extends StatelessWidget {
                   subTitle: 'demo@gmail.com')),
           SliverToBoxAdapter(
             child: SizedBox(
-              height: 8,
+              height: 0,
             ),
           ),
           DrawerItemListViewBulider(),
@@ -34,7 +34,7 @@ class CustomDrawer extends StatelessWidget {
               children: [
                 Expanded(
                     child: SizedBox(
-                  height: 20,
+                  height: 10,
                 )),
                 InActiveDrawerItem(
                   darwerItemModel: DrawerItemModel(
