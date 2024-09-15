@@ -1,6 +1,6 @@
-class DarwerItemModel {
+class DrawerItemModel {
   final String title;
   final String image;
 
-  DarwerItemModel({required this.title, required this.image});
+  const DrawerItemModel({required this.title, required this.image});
 }

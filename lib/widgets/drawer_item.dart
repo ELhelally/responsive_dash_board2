@@ -5,7 +5,7 @@ import 'package:responsive_dash_board/utils/app_styles.dart';
 
 class DrawerItem extends StatelessWidget {
   const DrawerItem({super.key, required this.darwerItemModel});
-  final DarwerItemModel darwerItemModel;
+  final DrawerItemModel darwerItemModel;
   @override
   Widget build(BuildContext context) {
     return ListTile(
