@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/darwer_item_model.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
 import 'package:responsive_dash_board/widgets/drawer_item.dart';
+import 'package:responsive_dash_board/widgets/drawer_item_list_view_bulider.dart';
 import 'package:responsive_dash_board/widgets/user_info_list_title.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -20,27 +21,17 @@ class CustomDrawer extends StatelessWidget {
       decoration: const BoxDecoration(
         color: Colors.white,
       ),
-      child: Column(
+      child: const Column(
         children: [
-          const UserInfoListTitle(
+          UserInfoListTitle(
               image:
                   Assets.assetsImagesGangsterFace3dRenderingIconIllustrationPng,
               title: 'Lekan Okeowo',
               subTitle: 'demo@gmail.com'),
-          const SizedBox(
+          SizedBox(
             height: 8,
           ),
-          ListView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            itemCount: item.length,
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.only(top: 20),
-                child: DrawerItem(darwerItemModel: item[index]),
-              );
-            },
-          )
+          DrawerItemListViewBulider(item: item)
         ],
       ),
     );
