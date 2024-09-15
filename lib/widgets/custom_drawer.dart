@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/utils/app_images.dart';
+import 'package:responsive_dash_board/widgets/user_info_list_title.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -9,8 +11,14 @@ class CustomDrawer extends StatelessWidget {
       decoration: const BoxDecoration(
         color: Colors.white,
       ),
-      child: Column(
-        children: [],
+      child: const Column(
+        children: [
+          UserInfoListTitle(
+              image:
+                  Assets.assetsImagesGangsterFace3dRenderingIconIllustrationPng,
+              title: 'Lekan Okeowo',
+              subTitle: 'demo@gmail.com')
+        ],
       ),
     );
   }
