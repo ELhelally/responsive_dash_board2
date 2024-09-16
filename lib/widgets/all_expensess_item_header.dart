@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:responsive_dash_board/utils/app_images.dart';
-import 'package:responsive_dash_board/widgets/user_info_list_title.dart';
 
 class AllExpansessItemHader extends StatelessWidget {
   const AllExpansessItemHader({super.key, required this.image});
@@ -20,13 +18,12 @@ class AllExpansessItemHader extends StatelessWidget {
           ),
           child: Center(child: SvgPicture.asset(image)),
         ),
-        const Spacer(),
         Transform.rotate(
             angle: -1.57079633 * 2,
             child: const Icon(
               Icons.arrow_back_ios_new_outlined,
               color: Color(0xFF064060),
-            ))
+            )),
       ],
     );
   }
