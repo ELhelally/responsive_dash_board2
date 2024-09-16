@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/utils/app_images.dart';
+
 import 'package:responsive_dash_board/utils/app_styles.dart';
 
 class UserInfoListTitle extends StatelessWidget {
