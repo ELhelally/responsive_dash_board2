@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AllExpansessItemHader extends StatelessWidget {
-  const AllExpansessItemHader({super.key, required this.image});
+  const AllExpansessItemHader(
+      {super.key, required this.image, this.imageBackground, this.imageColor});
   final String image;
+  final Color? imageBackground, imageColor;
 
   @override
   Widget build(BuildContext context) {
@@ -12,17 +14,23 @@ class AllExpansessItemHader extends StatelessWidget {
         Container(
           width: 60,
           height: 60,
-          decoration: const ShapeDecoration(
-            color: Color(0xFFFAFAFA),
-            shape: OvalBorder(),
+          decoration: ShapeDecoration(
+            color: imageBackground ?? const Color(0xFFFAFAFA),
+            shape: const OvalBorder(),
           ),
-          child: Center(child: SvgPicture.asset(image)),
+          child: Center(
+              child: SvgPicture.asset(
+            image,
+            colorFilter: ColorFilter.mode(
+                imageColor ?? const Color(0xFF4EB7F2), BlendMode.srcIn),
+          )),
         ),
+        const Expanded(child: SizedBox()),
         Transform.rotate(
             angle: -1.57079633 * 2,
-            child: const Icon(
+            child: Icon(
               Icons.arrow_back_ios_new_outlined,
-              color: Color(0xFF064060),
+              color: imageColor ?? const Color(0xFF064060),
             )),
       ],
     );
