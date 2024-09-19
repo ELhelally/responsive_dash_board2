@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/models/user_info_model.dart';
 
 import 'package:responsive_dash_board/utils/app_styles.dart';
 
 class UserInfoListTitle extends StatelessWidget {
-  const UserInfoListTitle(
-      {super.key,
-      required this.image,
-      required this.title,
-      required this.subTitle});
-  final String image, title, subTitle;
+  const UserInfoListTitle({super.key, required this.userInfoModel});
+  final UserInfoModel userInfoModel;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -16,14 +13,14 @@ class UserInfoListTitle extends StatelessWidget {
       elevation: 0,
       child: ListTile(
         leading: Image.asset(
-          image,
+          userInfoModel.image,
         ),
         title: Text(
-          title,
+          userInfoModel.title,
           style: AppStyles.styleSemiBold16,
         ),
         subtitle: Text(
-          subTitle,
+          userInfoModel.subTitle,
           style: AppStyles.styleRegular12,
         ),
       ),
