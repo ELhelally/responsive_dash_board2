@@ -7,7 +7,7 @@ class LatestTransctionListView extends StatelessWidget {
   const LatestTransctionListView({super.key});
   static const items = [
     UserInfoModel(
-        image: Assets.assetsImagesReadyPlayerMeAvatar,
+        image: Assets.assetsImagesGangsterFace3dRenderingIconIllustrationPng,
         title: 'Madrani Andi',
         subTitle: 'Madraniadi20@gmail'),
     UserInfoModel(
@@ -21,13 +21,34 @@ class LatestTransctionListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          return UserInfoListTitle(
-            userInfoModel: items[index],
-          );
-        });
+    return
+        //    SingleChildScrollView(
+        //     scrollDirection: Axis.horizontal,
+        //     child: Row(
+        //       children: items
+        //           .map((e) => IntrinsicWidth(
+        //                 child: UserInfoListTitle(userInfoModel: e),
+        //               ))
+        //           .toList(),
+        //     ),
+        //   );
+        // }
+
+        //
+        //
+        //
+        SizedBox(
+      height: 80,
+      child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            return IntrinsicWidth(
+              child: UserInfoListTitle(
+                userInfoModel: items[index],
+              ),
+            );
+          }),
+    );
   }
 }
